@@ -1,0 +1,71 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+
+</head>
+<body>
+    <div class="editor">
+        <textarea name="" id="html-code" cols="30" rows="10"></textarea>
+        <textarea name="" id="css-code" cols="30" rows="10"></textarea>
+        <textarea name="" id="js-code" cols="30" rows="10"></textarea>
+        <iframe id="output" ></iframe>
+    </div>
+
+    <script type="text/javascript">
+        function run()
+        {
+            let htmlCode=document.querySelector(".editor #html-code").value;
+            let cssCode="<style>"+document.querySelector(".editor #css-code").value+"</style>";
+            let jsCode=document.querySelector(".editor #js-code").value;
+            let output=document.querySelector(".editor #output");
+            console.log(jsCode );
+            output.contentDocument.body.innerHTML=htmlCode+cssCode;
+            output.contentWindow.eval(jsCode);
+
+        }
+        document.querySelector(".editor #html-code").addEventListener("keyup",run);
+        document.querySelector(".editor #css-code").addEventListener("keyup",run);
+        document.querySelector(".editor #js-code").addEventListener("keyup",run);
+
+
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   
+    <br>
+    <div class="code-editor">
+        <div class="code">
+            <div class="html-code">
+                <h1><img src="images/html.png" alt="">HTML</h1>
+                <textarea></textarea>
+            </div>
+            <div class="css-code">
+                <h1><img src="images/CSS.png" alt="">CSS</h1>
+                <textarea></textarea>
+            </div>
+            <div class="js-code">
+                <h1><img src="images/js.png" alt="">JS</h1>
+                <textarea spellcheck="false"></textarea>
+            </div>
+        </div>
+        <iframe id="result"></iframe>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
